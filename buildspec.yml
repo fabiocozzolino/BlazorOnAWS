@@ -3,7 +3,7 @@ version: 0.2
 phases:
     install:
         commands:
-            - ./dotnet-install.sh --channel LTS
+            - ./dotnet-install.ps1 --channel LTS
             
     build:
         commands:
