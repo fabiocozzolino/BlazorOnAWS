@@ -5,7 +5,7 @@ phases:
         commands:
             - pwsh
             - pwsh -Command "Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile 'dotnet-install.ps1'"
-            - pwsh -Command "./dotnet-install.ps1 -Channel LTS InstallDir ./"
+            - pwsh -Command "./dotnet-install.ps1 -Channel LTS -InstallDir ./"
             
     build:
         commands:
