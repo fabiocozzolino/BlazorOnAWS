@@ -3,8 +3,9 @@ version: 0.2
 phases:
     install:
         commands:
-            - powershell -command "Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile 'dotnet-install.ps1'"
-            - powershell -command "./dotnet-install.ps1 -Channel LTS"
+            - pwsh
+            - pwsh -Command "Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile 'dotnet-install.ps1'"
+            - pwsh -Command "./dotnet-install.ps1 -Channel 6.0.2"
             
     build:
         commands:
