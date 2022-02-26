@@ -3,7 +3,8 @@ version: 0.2
 phases:
     install:
         commands:
-            - powershell -command "./dotnet-install.ps1 --channel LTS"
+            - powershell -command "Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1'"
+            - powershell -command "./dotnet-install.ps1 -Channel LTS"
             
     build:
         commands:
