@@ -12,7 +12,6 @@ phases:
             
 artifacts:
     files:
-        - '**/*'
+        - deployfolder/**/*
         - aws-windows-deployment-manifest.json
-    base-directory: 'deployfolder'
         
